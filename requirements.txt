@@ -1,0 +1,38 @@
+# ============================================================
+# Django Admin Backend — 项目依赖
+# 用法: pip install -r requirements.txt
+# 推荐 Python 3.11+
+# ============================================================
+
+# --- Web 框架 ---
+Django>=5.1,<5.2
+djangorestframework>=3.15,<3.16
+django-cors-headers>=4.3,<5.0      # 跨域
+django-filter>=24.1                  # 查询过滤
+drf-spectacular>=0.27,<1.0          # OpenAPI 文档生成（比 coreapi 新）
+
+# --- 认证 ---
+djangorestframework-simplejwt>=5.3   # JWT 认证
+
+# --- 数据库 ---
+psycopg[binary]>=3.1                 # PostgreSQL 驱动（3.x 异步支持）
+redis>=5.0                           # 缓存 / Celery Broker
+
+# --- 异步任务 ---
+celery>=5.4                          # 异步任务队列
+django-celery-beat>=2.6              # 定时任务
+
+# --- 文件存储 ---
+django-storages>=1.14                # 文件存储后端（支持 S3/MinIO 等）
+Pillow>=10.0                         # 图片处理
+
+# --- 工具 ---
+python-dotenv>=1.0                   # .env 加载
+python-dateutil>=2.8                 # 日期处理
+openpyxl>=3.1                        # Excel 导入导出
+
+# --- 开发 / 测试 ---
+pytest>=8.0                          # 测试框架
+pytest-django>=4.8
+pytest-cov>=5.0
+coverage>=7.4
